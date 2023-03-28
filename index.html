@@ -1,0 +1,657 @@
+<!DOCTYPE html><!--  This site was created in Webflow. https://www.webflow.com  -->
+<!--  Last Published: Tue Mar 28 2023 07:55:49 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="641d6e805cfae60c34ea52aa" data-wf-site="641d6e805cfae6e798ea52ab">
+<head>
+  <meta charset="utf-8">
+  <title>mSeller - Phần mềm quản lý bán hàng</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/styleguide-eff8f5-0144872785358dad1f362.webflow.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Lexend Deca:100,300,regular,500,600:latin,latin-ext,vietnamese"]  }});</script>
+  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/logo.svg" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon"><!--  Please keep this css code to improve the font quality -->
+  <style>
+  * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+</style>
+  <!--  You can remove this  -->
+  <meta name="facebook-domain-verification" content="mlk59ybu44651lzcbhhxjfl8vfae8q">
+</head>
+<body class="body">
+  <div class="page-wrapper">
+    <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
+      <div class="nav-container">
+        <a href="#" class="w-nav-brand">
+          <div class="w-embed"><svg width="45" height="46" viewbox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="22.5" cy="23" r="22.5" fill="#2DB894"></circle>
+              <path d="M34.7965 18.5729L34.4523 15.2852C33.9538 11.7006 32.3277 10.2407 28.85 10.2407H26.0489H24.2922H20.684H18.9273H16.0787C12.5891 10.2407 10.9749 11.7006 10.4645 15.3208L10.144 18.5848C10.0254 19.8548 10.3696 21.0892 11.1173 22.0506C12.0194 23.2257 13.4081 23.8904 14.9511 23.8904C16.4466 23.8904 17.8828 23.1426 18.7849 21.9438C19.592 23.1426 20.9688 23.8904 22.5 23.8904C24.0311 23.8904 25.3723 23.1782 26.1913 21.9913C27.1052 23.1664 28.5177 23.8904 29.9895 23.8904C31.5681 23.8904 32.9924 23.1901 33.8826 21.9557C34.5947 21.0061 34.9152 19.8074 34.7965 18.5729Z" fill="white"></path>
+              <path d="M21.7284 28.5311C20.221 28.6854 19.0815 29.9673 19.0815 31.4865V34.7387C19.0815 35.0592 19.3427 35.3203 19.6631 35.3203H25.3248C25.6452 35.3203 25.9064 35.0592 25.9064 34.7387V31.902C25.9182 29.4213 24.4583 28.2462 21.7284 28.5311Z" fill="white"></path>
+              <path d="M33.6214 25.8487V29.3857C33.6214 32.6616 30.9627 35.3204 27.6868 35.3204C27.3663 35.3204 27.1052 35.0592 27.1052 34.7388V31.902C27.1052 30.3827 26.6423 29.1958 25.7402 28.3887C24.945 27.6647 23.8649 27.3086 22.5237 27.3086C22.2269 27.3086 21.9302 27.3205 21.6097 27.3561C19.497 27.5697 17.8946 29.3501 17.8946 31.4866V34.7388C17.8946 35.0592 17.6335 35.3204 17.3131 35.3204C14.0371 35.3204 11.3784 32.6616 11.3784 29.3857V25.8724C11.3784 25.0416 12.1974 24.4837 12.9689 24.7567C13.2894 24.8635 13.6098 24.9466 13.9422 24.9941C14.0846 25.0178 14.2389 25.0416 14.3813 25.0416C14.5713 25.0653 14.7612 25.0772 14.9511 25.0772C16.3279 25.0772 17.681 24.5668 18.7492 23.6885C19.77 24.5668 21.0993 25.0772 22.4999 25.0772C23.9124 25.0772 25.218 24.5905 26.2387 23.7122C27.307 24.5787 28.6363 25.0772 29.9894 25.0772C30.2031 25.0772 30.4167 25.0653 30.6185 25.0416C30.7609 25.0297 30.8915 25.0178 31.0221 24.9941C31.39 24.9466 31.7223 24.8398 32.0547 24.733C32.8262 24.4718 33.6214 25.0416 33.6214 25.8487Z" fill="white"></path>
+            </svg></div>
+        </a>
+        <nav role="navigation" class="nav-menu w-nav-menu">
+          <div class="nav_link-wrapper">
+            <a href="#" class="nav-link w-nav-link">Tính năng</a>
+            <div class="nav_link-underline"></div>
+          </div>
+          <div class="nav_link-wrapper">
+            <a href="#" class="nav-link w-nav-link">Về chúng tôi</a>
+            <div class="nav_link-underline"></div>
+          </div>
+          <div class="nav_link-wrapper">
+            <a href="#" class="nav-link w-nav-link">Sản phẩm</a>
+            <div class="nav_link-underline"></div>
+          </div>
+          <div class="nav_link-wrapper">
+            <a href="#" class="nav-link w-nav-link">Bảng giá</a>
+            <div class="nav_link-underline"></div>
+          </div>
+          <div class="nav_link-wrapper">
+            <a href="#" class="nav-link w-nav-link">Tài liệu</a>
+            <div class="nav_link-underline"></div>
+          </div>
+          <div class="nav_link-wrapper">
+            <a href="#" class="nav-link w-nav-link">Liên hệ</a>
+            <div class="nav_link-underline"></div>
+          </div>
+        </nav>
+        <div class="div-block-14">
+          <a href="#" class="button-primary w-button">Dùng thử ngay</a>
+          <div class="w-nav-button">
+            <div class="w-icon-nav-menu"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="global-styles w-embed">
+      <style>
+/* Get rid of top margin on first element in any rich text element */
+.w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
+  margin-top: 0 !important;
+}
+/* Get rid of bottom margin on last element in any rich text element */
+.w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+	margin-bottom: 0 !important;
+}
+/* 
+Make the following elements inherit typography styles from the parent and not have hardcoded values. 
+Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
+Uncomment this CSS to use it in the project. Leave this message for future hand-off.
+*/
+/*
+a,
+.w-input,
+.w-select,
+.w-tab-link,
+.w-nav-link,
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-dropdown-link {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+}
+*/
+/* Prevent all click and hover interaction with an element */
+.pointer-events-off {
+	pointer-events: none;
+}
+/* Enables all click and hover interaction with an element */
+.pointer-events-on {
+  pointer-events: auto;
+}
+/* Snippet enables you to add class of div-square which creates and maintains a 1:1 dimension of a div.*/
+.div-square::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+/*Hide focus outline for main content element*/
+    main:focus-visible {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+/* Make sure containers never lose their center alignment*/
+.container-medium, .container-small, .container-large {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+/*Reset selects, buttons, and links styles*/
+.w-input, .w-select, a {
+color: inherit;
+text-decoration: inherit;
+font-size: inherit;
+}
+/*Apply "..." after 3 lines of text */
+.text-style-3lines {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+/* Apply "..." after 2 lines of text */
+.text-style-2lines {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+/* Apply "..." at 100% width */
+.truncate-width { 
+		width: 100%; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+/* Removes native scrollbar */
+.no-scrollbar {
+    -ms-overflow-style: none; 
+    overflow: -moz-scrollbars-none;
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+/* Adds inline flex display */
+.display-inlineflex {
+  display: inline-flex;
+}
+/* These classes are never overwritten */
+.hide {
+  display: none !important;
+}
+@media screen and (max-width: 991px) {
+    .hide, .hide-tablet {
+        display: none !important;
+    }
+}
+  @media screen and (max-width: 767px) {
+    .hide-mobile-landscape{
+      display: none !important;
+    }
+}
+  @media screen and (max-width: 479px) {
+    .hide-mobile{
+      display: none !important;
+    }
+}
+.margin-0 {
+  margin: 0rem !important;
+}
+.padding-0 {
+  padding: 0rem !important;
+}
+.spacing-clean {
+padding: 0rem !important;
+margin: 0rem !important;
+}
+.margin-top {
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-top {
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+.margin-right {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-right {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+.margin-bottom {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-bottom {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+.margin-left {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+.padding-left {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+.margin-horizontal {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+.padding-horizontal {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+.margin-vertical {
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-vertical {
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+</style>
+    </div>
+    <main class="main-wrapper">
+      <div class="section-default overflow-hidden wf-section">
+        <div class="padding-global">
+          <div class="container">
+            <div class="padding-vertical padding-custom1">
+              <div class="div-block">
+                <div class="hero-content-left">
+                  <div class="margin-bottom margin-custom2">
+                    <h1 class="heading-style-h1">Giải pháp kinh doanh nhà hàng hiệu quả.</h1>
+                  </div>
+                  <div class="button-wrapper">
+                    <a href="#" class="button-primary w-button">Dùng thử ngay</a>
+                    <a href="#" class="button-primary is-2nd w-button">Tìm hiểu thêm</a>
+                  </div>
+                </div>
+                <div class="hero-content-right">
+                  <p class="text-size-medium text-color-grey">Quản lí vận hành kinh doanh một cách thông minh và hiệu quả hơn. Bạn đã sẵn sàng thay đổi chưa?</p>
+                  <div class="div-block-3">
+                    <div class="div-block-2">
+                      <p class="heading-style-h3 text-color-grey">70%</p>
+                      <p class="max-width-89px">Hiệu quả kinh doanh</p>
+                    </div>
+                    <div class="div-block-2">
+                      <p class="heading-style-h3 text-color-grey">35%</p>
+                      <p class="max-width-61px">Tiết kiệm chi phí</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="hero-img-wrapper"><img src="images/light-2_1.png" loading="lazy" sizes="(max-width: 479px) 94vw, (max-width: 991px) 81vw, 76vw" data-w-id="b87a4736-ddc0-db7a-b0f4-2fe34732e086" srcset="images/light-2_1-p-500.png 500w, images/light-2_1-p-800.png 800w, images/light-2_1-p-1080.png 1080w, images/light-2_1-p-1600.png 1600w, images/light-2_1.png 3096w" alt="" class="image"><img src="images/light-2.png" loading="lazy" data-w-id="5e2d34ee-0f43-bf65-2217-14da8891e9b8" alt="" class="image-2"></div>
+            </div>
+          </div>
+        </div>
+        <div class="hero_logo-wrapper">
+          <div class="padding-global">
+            <div class="padding-vertical padding-custom2">
+              <div class="hero_logo_component">
+                <div data-w-id="1166ad2f-8fd8-0e8e-eb28-4e5a7b7cdd87" style="-webkit-transform:translate3d(0rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="div-block-5">
+                  <div class="div-block-4"><img src="images/MBbank-1.png" loading="lazy" width="106" alt=""><img src="images/MBbank-1.png" loading="lazy" width="106" alt=""><img src="images/MBbank-1.png" loading="lazy" width="106" alt=""><img src="images/MBbank-1.png" loading="lazy" width="106" alt=""><img src="images/MBbank-1.png" loading="lazy" width="106" alt=""><img src="images/MBbank-1.png" loading="lazy" width="106" alt=""></div>
+                  <div class="div-block-4"><img src="images/MBbank-1.png" loading="lazy" width="106" alt=""><img src="images/MBbank-1.png" loading="lazy" width="106" alt=""><img src="images/MBbank-1.png" loading="lazy" width="106" alt=""><img src="images/MBbank-1.png" loading="lazy" width="106" alt=""><img src="images/MBbank-1.png" loading="lazy" width="106" alt=""><img src="images/MBbank-1.png" loading="lazy" width="106" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="background-color-lightgrey wf-section">
+      <div class="padding-global">
+        <div class="container">
+          <div class="padding-vertical padding-huge">
+            <div class="margin-bottom margin-xsmall">
+              <h2 class="heading-style-h2 text-align-center">Tiết kiệm thời gian cũng là tiết kiệm chi phí!</h2>
+            </div>
+            <div class="max-width-610px">
+              <div class="margin-bottom margin-custom3">
+                <p class="text-align-center text-color-grey">Lược bỏ được những thao tác thủ công, hãy để công nghệ làm điều đó giúp bạn. Tiết kiệm thời gian đồng nghĩa với tiết kiệm được chi phí!</p>
+              </div>
+            </div>
+            <div class="grid-column">
+              <div class="grid-column-50">
+                <div class="feature-image-wrapper backgroud-color-main">
+                  <div class="featured-content-wrapper">
+                    <div class="margin-bottom margin-xsmall">
+                      <h1 class="heading-style-h3 text-color-white">Menu gọi món trực quan</h1>
+                    </div>
+                    <p class="text-color-white">Menu gọi món trực quan, thao tác dễ dàng và nhanh chóng trên ứng dụng.</p>
+                  </div><img src="images/Group-427319802-1.png" loading="lazy" sizes="(max-width: 479px) 94vw, (max-width: 991px) 72vw, 41vw" srcset="images/Group-427319802-1-p-500.png 500w, images/Group-427319802-1-p-800.png 800w, images/Group-427319802-1-p-1080.png 1080w, images/Group-427319802-1.png 1674w" alt="" class="feature-img1">
+                </div>
+              </div>
+              <div class="grid-column-50">
+                <div class="feature-image-wrapper-right backgroud-color-main">
+                  <div class="featured-content-wrapper">
+                    <div class="margin-bottom margin-xsmall">
+                      <h1 class="heading-style-h3">Quản lí trạng thái bàn tầng</h1>
+                    </div>
+                    <p class="text-color-grey">Quản lí đơn hàng theo sơ đồ bàn tầng. Dễ dàng nắm bắt được trạng thái bàn tầng và hiệu suất kinh doanh của cửa hàng theo khung giờ.</p>
+                  </div><img src="images/Group-427319803-1.png" loading="lazy" sizes="(max-width: 479px) 94vw, (max-width: 767px) 54vw, (max-width: 991px) 63vw, 41vw" srcset="images/Group-427319803-1-p-500.png 500w, images/Group-427319803-1-p-800.png 800w, images/Group-427319803-1-p-1080.png 1080w, images/Group-427319803-1.png 1674w" alt="" class="feature-img2">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wf-section">
+      <div class="padding-global">
+        <div class="container">
+          <div class="padding-vertical padding-huge">
+            <p class="sub-title">Tính năng</p>
+            <div class="margin-bottom margin-xsmall">
+              <h2 class="heading-style-h2 text-align-center">Tích hợp trên đa nền tảng</h2>
+            </div>
+            <div class="max-width-610px">
+              <div class="margin-bottom margin-custom3">
+                <p class="text-align-center text-color-grey">Ứng dụng được tích hợp trên cả nền tảng điện thoại và máy tính bảng, máy tính,... phù hợp cho nhiều loại mô hình kinh doanh khác nhau.</p>
+              </div>
+            </div>
+            <div class="full-width-img-wrapper"><img src="images/Group-427319777-2-1.png" loading="lazy" data-w-id="d2d5240f-0ec5-e519-5f16-68a4ec7fe0cb" sizes="(max-width: 479px) 94vw, (max-width: 991px) 90vw, 84vw" srcset="images/Group-427319777-1-p-500.png 500w, images/Group-427319777-1-p-800.png 800w, images/Group-427319777-1-p-1080.png 1080w, images/Group-427319777-1-p-1600.png 1600w, images/Group-427319777-1-p-2000.png 2000w, images/Group-427319777-2-1.png 4560w" alt="" class="image-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wf-section">
+      <div class="padding-global">
+        <div class="container">
+          <div class="padding-vertical padding-huge">
+            <p class="sub-title">Tính năng</p>
+            <div class="margin-bottom margin-xsmall">
+              <div class="max-width-medium2">
+                <h2 class="heading-style-h2 text-align-center">Gọi món nhanh chóng và dễ dàng với chỉ vài thao tác</h2>
+              </div>
+            </div>
+            <div class="max-width-610px">
+              <div class="margin-bottom margin-custom3">
+                <p class="text-align-center text-color-grey">Ứng dụng được tích hợp trên cả nền tảng điện thoại và máy tính bảng, máy tính,... phù hợp cho nhiều loại mô hình kinh doanh khác nhau.</p>
+              </div>
+            </div>
+            <div class="_3-column-grid">
+              <div class="div-block-6">
+                <div class="margin-bottom margin-medium">
+                  <div class="feature-icon">
+                    <div class="w-embed"><svg width="51" height="51" viewbox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M26.3142 19.3972C26.3142 16.4762 28.6822 14.1082 31.6032 14.1082C34.5242 14.1082 36.8922 16.4762 36.8922 19.3972C36.8922 22.3183 34.5242 24.6863 31.6032 24.6863C28.6822 24.6863 26.3142 22.3183 26.3142 19.3972ZM31.6032 16.5493C30.0303 16.5493 28.7553 17.8244 28.7553 19.3972C28.7553 20.9701 30.0303 22.2452 31.6032 22.2452C33.1761 22.2452 34.4511 20.9701 34.4511 19.3972C34.4511 17.8244 33.1761 16.5493 31.6032 16.5493ZM43.052 34.4046C43.4018 33.574 43.685 32.7076 43.8951 31.8118C44.8689 27.6603 44.8689 23.3397 43.8951 19.1882C42.4888 13.1929 37.8076 8.51167 31.8123 7.10536C27.6608 6.13155 23.3402 6.13155 19.1887 7.10536C13.1934 8.51167 8.51217 13.1929 7.10585 19.1882C6.13203 23.3397 6.13203 27.6603 7.10585 31.8118C7.20911 32.252 7.33002 32.6851 7.4678 33.1103L8.75086 31.8275C13.3913 27.188 20.9149 27.188 25.5554 31.8276L29.1481 35.4195L30.0899 34.4779C33.6984 30.8701 39.4909 30.9124 43.052 34.4046ZM41.8652 36.7202L41.813 36.6575C39.2621 33.5971 34.6334 33.3872 31.8159 36.2042L30.8744 37.1455L36.0026 42.2728C38.3739 40.9511 40.3739 39.0546 41.8191 36.7667C41.8349 36.7515 41.8503 36.736 41.8652 36.7202ZM33.6316 43.3541L23.8295 33.5538C20.1422 29.8673 14.164 29.8673 10.4768 33.5538L8.48339 35.5468C10.6292 39.7033 14.5085 42.7968 19.1887 43.8946C23.3402 44.8685 27.6608 44.8685 31.8123 43.8946C32.4336 43.7489 33.0408 43.568 33.6316 43.3541Z" fill="#34C09C"></path>
+                      </svg></div>
+                  </div>
+                </div>
+                <div class="margin-bottom margin-xxsmall">
+                  <h4 class="heading">Giao diện thân thiện</h4>
+                </div>
+                <p class="paragraph-2">Giao diện thân thiện, hiển thị trực quan, thao tác đơn giản</p>
+              </div>
+              <div class="div-block-6">
+                <div class="margin-bottom margin-medium">
+                  <div class="feature-icon">
+                    <div class="w-embed"><svg width="51" height="51" viewbox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M26.3142 19.3972C26.3142 16.4762 28.6822 14.1082 31.6032 14.1082C34.5242 14.1082 36.8922 16.4762 36.8922 19.3972C36.8922 22.3183 34.5242 24.6863 31.6032 24.6863C28.6822 24.6863 26.3142 22.3183 26.3142 19.3972ZM31.6032 16.5493C30.0303 16.5493 28.7553 17.8244 28.7553 19.3972C28.7553 20.9701 30.0303 22.2452 31.6032 22.2452C33.1761 22.2452 34.4511 20.9701 34.4511 19.3972C34.4511 17.8244 33.1761 16.5493 31.6032 16.5493ZM43.052 34.4046C43.4018 33.574 43.685 32.7076 43.8951 31.8118C44.8689 27.6603 44.8689 23.3397 43.8951 19.1882C42.4888 13.1929 37.8076 8.51167 31.8123 7.10536C27.6608 6.13155 23.3402 6.13155 19.1887 7.10536C13.1934 8.51167 8.51217 13.1929 7.10585 19.1882C6.13203 23.3397 6.13203 27.6603 7.10585 31.8118C7.20911 32.252 7.33002 32.6851 7.4678 33.1103L8.75086 31.8275C13.3913 27.188 20.9149 27.188 25.5554 31.8276L29.1481 35.4195L30.0899 34.4779C33.6984 30.8701 39.4909 30.9124 43.052 34.4046ZM41.8652 36.7202L41.813 36.6575C39.2621 33.5971 34.6334 33.3872 31.8159 36.2042L30.8744 37.1455L36.0026 42.2728C38.3739 40.9511 40.3739 39.0546 41.8191 36.7667C41.8349 36.7515 41.8503 36.736 41.8652 36.7202ZM33.6316 43.3541L23.8295 33.5538C20.1422 29.8673 14.164 29.8673 10.4768 33.5538L8.48339 35.5468C10.6292 39.7033 14.5085 42.7968 19.1887 43.8946C23.3402 44.8685 27.6608 44.8685 31.8123 43.8946C32.4336 43.7489 33.0408 43.568 33.6316 43.3541Z" fill="#34C09C"></path>
+                      </svg></div>
+                  </div>
+                </div>
+                <div class="margin-bottom margin-xxsmall">
+                  <h4 class="heading">Giao diện thân thiện</h4>
+                </div>
+                <p class="paragraph">Giao diện thân thiện, hiển thị trực quan, thao tác đơn giản</p>
+              </div>
+              <div class="div-block-6">
+                <div class="margin-bottom margin-medium">
+                  <div class="feature-icon">
+                    <div class="w-embed"><svg width="51" height="51" viewbox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M26.3142 19.3972C26.3142 16.4762 28.6822 14.1082 31.6032 14.1082C34.5242 14.1082 36.8922 16.4762 36.8922 19.3972C36.8922 22.3183 34.5242 24.6863 31.6032 24.6863C28.6822 24.6863 26.3142 22.3183 26.3142 19.3972ZM31.6032 16.5493C30.0303 16.5493 28.7553 17.8244 28.7553 19.3972C28.7553 20.9701 30.0303 22.2452 31.6032 22.2452C33.1761 22.2452 34.4511 20.9701 34.4511 19.3972C34.4511 17.8244 33.1761 16.5493 31.6032 16.5493ZM43.052 34.4046C43.4018 33.574 43.685 32.7076 43.8951 31.8118C44.8689 27.6603 44.8689 23.3397 43.8951 19.1882C42.4888 13.1929 37.8076 8.51167 31.8123 7.10536C27.6608 6.13155 23.3402 6.13155 19.1887 7.10536C13.1934 8.51167 8.51217 13.1929 7.10585 19.1882C6.13203 23.3397 6.13203 27.6603 7.10585 31.8118C7.20911 32.252 7.33002 32.6851 7.4678 33.1103L8.75086 31.8275C13.3913 27.188 20.9149 27.188 25.5554 31.8276L29.1481 35.4195L30.0899 34.4779C33.6984 30.8701 39.4909 30.9124 43.052 34.4046ZM41.8652 36.7202L41.813 36.6575C39.2621 33.5971 34.6334 33.3872 31.8159 36.2042L30.8744 37.1455L36.0026 42.2728C38.3739 40.9511 40.3739 39.0546 41.8191 36.7667C41.8349 36.7515 41.8503 36.736 41.8652 36.7202ZM33.6316 43.3541L23.8295 33.5538C20.1422 29.8673 14.164 29.8673 10.4768 33.5538L8.48339 35.5468C10.6292 39.7033 14.5085 42.7968 19.1887 43.8946C23.3402 44.8685 27.6608 44.8685 31.8123 43.8946C32.4336 43.7489 33.0408 43.568 33.6316 43.3541Z" fill="#34C09C"></path>
+                      </svg></div>
+                  </div>
+                </div>
+                <div class="margin-bottom margin-xxsmall">
+                  <h4 class="heading">Giao diện thân thiện</h4>
+                </div>
+                <p class="paragraph-3">Giao diện thân thiện, hiển thị trực quan, thao tác đơn giản</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wf-section">
+      <div class="padding-global">
+        <div class="container">
+          <div class="padding-vertical padding-huge">
+            <div class="margin-bottom margin-custom3">
+              <div class="max-width-610px-copy">
+                <h2 class="heading-style-h2 text-align-center">Tích hợp thanh toán toàn diện với tài khoản thanh toán MB Bank.</h2>
+              </div>
+            </div>
+            <div class="grid-column">
+              <div class="grid-column-50">
+                <div class="feature-image-wrapper-2 backgroud-color-main">
+                  <div class="featured-content-wrapper-2">
+                    <div class="max-width-title">
+                      <h1 class="heading-style-h3 text-color-white">Quản lý nhận thông báo biến động số dư thông qua mSeller.</h1>
+                    </div>
+                    <a href="#" class="button-primary is-3nd w-button">Đăng ký ngay</a>
+                  </div><img src="images/light-3.png" loading="lazy" sizes="(max-width: 479px) 47vw, (max-width: 991px) 45vw, 21vw" data-w-id="f4e08b9e-aa1a-5d15-943a-168df32fabaf" srcset="images/light-3-p-500.png 500w, images/light-3.png 898w" alt="" class="image-4"><img src="images/Frame-427320709.png" loading="lazy" sizes="(max-width: 479px) 52vw, (max-width: 991px) 50vw, 23vw" srcset="images/Frame-427320709-p-500.png 500w, images/Frame-427320709.png 1113w" alt="" class="image-6"><img src="images/Frame-427320709.png" loading="lazy" sizes="(max-width: 479px) 66vw, (max-width: 991px) 63vw, 29vw" srcset="images/Frame-427320709-p-500.png 500w, images/Frame-427320709.png 1113w" alt="" class="image-5">
+                </div>
+              </div>
+              <div class="div-block-13">
+                <div class="grid-column-25">
+                  <div class="feature-image-wrapper-right-2 background-color-dark">
+                    <div class="featured-content-wrapper-4">
+                      <div class="margin-bottom margin-xsmall">
+                        <h1 class="heading-style-h3">Cá nhân hoá <span class="text-span">cửa hàng của bạn</span></h1>
+                      </div>
+                    </div><img src="images/Ellipse-253.png" loading="lazy" alt="" class="image-9"><img src="images/light-4.png" loading="lazy" sizes="(max-width: 479px) 86vw, (max-width: 991px) 39vw, 18vw" srcset="images/light-4-p-500.png 500w, images/light-4.png 738w" alt="" class="image-10">
+                  </div>
+                </div>
+                <div class="grid-column-25">
+                  <div class="feature-image-wrapper-right-2 background-color-dark">
+                    <div class="featured-content-wrapper-3">
+                      <div class="margin-bottom margin-xsmall">
+                        <h1 class="heading-style-h3">Quản lý từ xa <span class="text-span">chưa bao giờ dễ dàng đến thế.</span></h1>
+                      </div>
+                    </div><img src="images/Ellipse-251.png" loading="lazy" alt="" class="image-7"><img src="images/light.png" loading="lazy" alt="" class="image-8">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="background-color-gray wf-section">
+      <div class="padding-global">
+        <div class="container">
+          <div class="padding-vertical padding-huge">
+            <div class="testimonial-title-wrapper">
+              <div class="testimonial-inner-wrapper">
+                <p class="sub-title text-align-left">testimonial</p>
+                <div class="max-width-medium">
+                  <h1 class="heading-style-h2">Khách hàng của chúng tôi đang nói gì?</h1>
+                </div>
+              </div>
+              <a href="#" class="button-primary hide-mobile-portrait w-button">Dùng thử ngay</a>
+            </div>
+            <div class="testimonial-component">
+              <div class="testimonial-content-wrapper">
+                <div class="div-block-7">
+                  <div class="testimonial-content-inner-wrapper"><img src="images/“.png" loading="lazy" width="23" alt="">
+                    <p class="text-size-medium">“It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout”</p>
+                  </div>
+                  <div class="testimonial-content-inner-wrapper-bottom">
+                    <div class="div-block-8"><img src="images/Ellipse-254.png" loading="lazy" width="43" alt="">
+                      <div>
+                        <div class="margin-bottom margin-xxxsmall">
+                          <p class="text-size-medium text-color-black text-weight-normal">Gong Yoo</p>
+                        </div>
+                        <p>Project Manager at Walmart</p>
+                      </div>
+                    </div><img src="images/image-3.png" loading="lazy" width="150" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-content-wrapper">
+                <div class="div-block-7">
+                  <div class="testimonial-content-inner-wrapper"><img src="images/“.png" loading="lazy" width="23" alt="">
+                    <p class="text-size-medium text-color-black">“It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout”</p>
+                  </div>
+                  <div class="testimonial-content-inner-wrapper-bottom">
+                    <div class="div-block-8"><img src="images/Ellipse-254.png" loading="lazy" width="43" alt="">
+                      <div>
+                        <div class="margin-bottom margin-xxxsmall">
+                          <p class="text-size-medium text-color-black text-weight-normal">Gong Yoo</p>
+                        </div>
+                        <p>Project Manager at Walmart</p>
+                      </div>
+                    </div><img src="images/image-3.png" loading="lazy" width="150" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-subcription wf-section">
+      <div class="padding-subcription">
+        <div class="max-width-463px">
+          <div class="margin-bottom margin-xsmall">
+            <h1 class="heading-style-h2">Cùng chuyển đổi số và bứt phá kinh doanh ngay hôm nay!</h1>
+          </div>
+          <div class="margin-bottom margin-medium">
+            <p>Hàng trăm nghìn hộ kinh doanh trên cả nước đã chuyển đổi số và bứt phá. Đừng chần chừ nữa, hay sử dụng ứng dụng của chúng tôi ngay hôm nay.</p>
+          </div>
+          <div class="margin-bottom margin-medium">
+            <a href="#" class="button-primary is-3nd text-color-main w-button">Dùng thử ngay</a>
+          </div>
+          <div class="div-block-9">
+            <div class="div-block-10">
+              <div class="html-embed w-embed"><svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 16.5C13.125 16.5 16.5 13.125 16.5 9C16.5 4.875 13.125 1.5 9 1.5C4.875 1.5 1.5 4.875 1.5 9C1.5 13.125 4.875 16.5 9 16.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M5.8125 9.00043L7.935 11.1229L12.1875 6.87793" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg></div>
+              <p>Dùng thử miễn phí</p>
+            </div>
+            <div class="div-block-10">
+              <div class="html-embed w-embed"><svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 16.5C13.125 16.5 16.5 13.125 16.5 9C16.5 4.875 13.125 1.5 9 1.5C4.875 1.5 1.5 4.875 1.5 9C1.5 13.125 4.875 16.5 9 16.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M5.8125 9.00043L7.935 11.1229L12.1875 6.87793" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg></div>
+              <p>Dùng thử miễn phí</p>
+            </div>
+          </div>
+        </div>
+      </div><img src="images/light-5.png" loading="lazy" sizes="(max-width: 479px) 100vw, 45vw" srcset="images/light-5-p-500.png 500w, images/light-5-p-800.png 800w, images/light-5-p-1080.png 1080w, images/light-5-p-1600.png 1600w, images/light-5.png 2988w" alt="" class="subcription-img">
+    </div>
+    <div class="wf-section">
+      <div class="padding-global">
+        <div class="container">
+          <div class="padding-vertical padding-footer">
+            <div class="max-width-footer">
+              <div class="html-embed-2 w-embed"><svg width="68" height="67" viewbox="0 0 68 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="34" cy="33.5" r="33.5" fill="#2DB894"></circle>
+                  <path d="M52.3083 26.9087L51.7958 22.0135C51.0536 16.6766 48.6325 14.5029 43.4546 14.5029H39.284H36.6686H31.2963H28.6808H24.4395C19.2439 14.5029 16.8406 16.6766 16.0807 22.0666L15.6035 26.9264C15.4268 28.8173 15.9393 30.6552 17.0526 32.0866C18.3957 33.8361 20.4633 34.8258 22.7607 34.8258C24.9874 34.8258 27.1257 33.7124 28.4687 31.9275C29.6704 33.7124 31.7204 34.8258 34.0001 34.8258C36.2798 34.8258 38.2767 33.7654 39.4961 31.9982C40.8568 33.7478 42.9598 34.8258 45.1511 34.8258C47.5015 34.8258 49.6222 33.7831 50.9476 31.9452C52.0079 30.5315 52.485 28.7466 52.3083 26.9087Z" fill="white"></path>
+                  <path d="M32.851 41.7351C30.6067 41.9649 28.9102 43.8734 28.9102 46.1355V50.9776C28.9102 51.4547 29.2989 51.8435 29.7761 51.8435H38.2056C38.6828 51.8435 39.0716 51.4547 39.0716 50.9776V46.754C39.0892 43.0605 36.9156 41.311 32.851 41.7351Z" fill="white"></path>
+                  <path d="M50.5588 37.7417V43.008C50.5588 47.8854 46.6002 51.844 41.7228 51.844C41.2456 51.844 40.8568 51.4552 40.8568 50.978V46.7544C40.8568 44.4924 40.1676 42.7252 38.8246 41.5235C37.6405 40.4455 36.0324 39.9154 34.0354 39.9154C33.5936 39.9154 33.1518 39.933 32.6747 39.986C29.5291 40.3041 27.1433 42.9549 27.1433 46.1359V50.978C27.1433 51.4552 26.7546 51.844 26.2774 51.844C21.3999 51.844 17.4414 47.8854 17.4414 43.008V37.777C17.4414 36.54 18.6608 35.7094 19.8095 36.1159C20.2866 36.2749 20.7637 36.3986 21.2586 36.4693C21.4706 36.5047 21.7004 36.54 21.9124 36.54C22.1952 36.5753 22.4779 36.593 22.7607 36.593C24.8106 36.593 26.8252 35.8331 28.4157 34.5254C29.9355 35.8331 31.9148 36.593 34.0001 36.593C36.1031 36.593 38.047 35.8685 39.5668 34.5607C41.1573 35.8508 43.1365 36.593 45.1511 36.593C45.4692 36.593 45.7873 36.5753 46.0878 36.54C46.2998 36.5223 46.4942 36.5047 46.6886 36.4693C47.2364 36.3986 47.7312 36.2396 48.2261 36.0805C49.3747 35.6917 50.5588 36.54 50.5588 37.7417Z" fill="white"></path>
+                </svg></div>
+              <h1 class="heading-style-h3 text-align-center">Bứt phá kinh doanh cùng<br>mSeller ngay hôm nay</h1>
+              <p class="text-align-center">Bạn còn thắc mắc? Hãy để lại thông tin bên dưới, chúng tôi sẽ liên hệ sớm nhất có thể. Thông tin của bạn sẽ được bảo mật.</p>
+            </div>
+            <div class="w-form">
+              <form id="email-form" name="email-form" data-name="Email Form" method="get" class="form-2"><input type="text" class="text-field w-input" maxlength="256" name="name" data-name="Name" placeholder="Nhập email hoặc số điện thoại" id="name"><input type="submit" value="Get the demo" data-wait="Please wait..." class="button-primary w-button"></form>
+              <div class="w-form-done">
+                <div>Thank you! Your submission has been received!</div>
+              </div>
+              <div class="w-form-fail">
+                <div>Oops! Something went wrong while submitting the form.</div>
+              </div>
+            </div>
+            <div class="link-list-footer-wrapper">
+              <div class="div-block-11">
+                <div class="margin-bottom margin-xsmall">
+                  <p class="text-size-medium text-color-light-grey">Platform</p>
+                </div>
+                <div class="div-block-12">
+                  <a href="#" class="link">Integration</a>
+                  <a href="#" class="link">Integration</a>
+                  <a href="#" class="link">Integration</a>
+                  <a href="#" class="link">Integration</a>
+                </div>
+              </div>
+              <div class="div-block-11">
+                <div class="margin-bottom margin-xsmall">
+                  <p class="text-size-medium text-color-light-grey">Features</p>
+                </div>
+                <div class="div-block-12">
+                  <a href="#" class="link">Data Management</a>
+                  <a href="#" class="link">Data Management</a>
+                  <a href="#" class="link">Data Management</a>
+                  <a href="#" class="link">Data Management</a>
+                </div>
+              </div>
+              <div class="div-block-11">
+                <div class="margin-bottom margin-xsmall">
+                  <p class="text-size-medium text-color-light-grey">About</p>
+                </div>
+                <div class="div-block-12">
+                  <a href="#" class="link">Pricing</a>
+                  <a href="#" class="link">About us</a>
+                  <a href="#" class="link">Career</a>
+                  <a href="#" class="link">Term &amp; Policy</a>
+                </div>
+              </div>
+              <div class="div-block-11">
+                <div class="margin-bottom margin-xsmall">
+                  <p class="text-size-medium text-color-light-grey">Our blog</p>
+                </div>
+                <div class="div-block-12">
+                  <a href="#" class="link">Pricing</a>
+                  <a href="#" class="link">About us</a>
+                  <a href="#" class="link">Career</a>
+                  <a href="#" class="link">Term &amp; Policy</a>
+                </div>
+              </div>
+            </div>
+            <div class="footer-line"></div>
+            <div class="footer-credit-wrapper">
+              <p>© 2023, mSeller.vn All Right Reserved</p>
+              <p>Designed &amp; developed by <a href="#" class="link-2">Hung Le</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=641d6e805cfae6e798ea52ab" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ukiyojs@4.0.4/dist/ukiyo.min.js"></script>
+  <script>
+const images = document.querySelectorAll(".parallax")
+new Ukiyo(images)
+</script>
+  <script>
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+  direction: 'vertical', // vertical, horizontal
+  gestureDirection: 'vertical', // vertical, horizontal, both
+  smooth: true,
+  mouseMultiplier: 1,
+  smoothTouch: false,
+  touchMultiplier: 2,
+  infinite: false,
+})
+//get scroll value
+lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
+  console.log({ scroll, limit, velocity, direction, progress })
+})
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+requestAnimationFrame(raf)
+</script>
+</body>
+</html>
